@@ -21,6 +21,11 @@ df <- do.call(rbind, lapply(files, read.csv))
 print(head(df))  # Display the first rows
 
 #### Data Processing ----
+
+# This script preforms data processing for Stroop Analysis
+# Written by: Maya Betzalel
+# Last update: 28-12-2024
+
 df <- df |>
   mutate(
     congruency = as.factor(condition),  # Use the 'condition' column as 'congruency'
@@ -53,6 +58,10 @@ save(df, file = "C:/Users/maya3/OneDrive/Desktop/R/filtered_data.rdata")
 
 #### Descriptive Statistics ----
 
+# This script generates descriptives statistics for Stroop Analysis
+# Written by: Maya Betzalel
+# Last update: 28-12-2024
+
 # Compute means and standard deviations for each condition
 descriptive_stats <- df |> 
   group_by(task, congruency) |> 
@@ -68,6 +77,10 @@ descriptive_stats <- df |>
 print(descriptive_stats)
 
 #### Plots ----
+
+# This script creates plots for Stroop Analysis
+# Written by: Maya Betzalel
+# Last update: 28-12-2024
 
 # Plot mean reaction times (RT) by task and congruency
 ggplot(descriptive_stats, aes(x = congruency, y = mean_rt, fill = task)) +
@@ -94,3 +107,5 @@ ggplot(descriptive_stats, aes(x = congruency, y = mean_acc, fill = task)) +
     fill = "Task"
   ) +
   theme_minimal()
+
+
