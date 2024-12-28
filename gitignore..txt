@@ -1,3 +1,1 @@
-.RData
-temp/
-secrets.txtraw_data.rdataraw_data.rdata
+raw_data.rdata
