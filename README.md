@@ -1,6 +1,3 @@
-#stroop_project
-##project_description
-every day is a great opportunity to create a stroop project
-```R
-data <- read.csv("stroop_data.csv")
-summary(data)
+# Stroop Effect Analysis  
+This project analyzes the Stroop effect, a psychological phenomenon where there is a delay in reaction time when the meaning of a word conflicts with its color.  
+The analysis includes data preprocessing, descriptive statistics, and regression modeling to examine response times under congruent and incongruent conditions.  
